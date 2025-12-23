@@ -79,7 +79,8 @@ export default function WhyFitMafia() {
           1024: { slidesPerView: 3.2 },
         }}
         loop={true}
-        className="scroll-smooth"
+        
+        className="scroll-smooth h-64"
       >
         {features.map((feature, idx) => (
           <SwiperSlide key={idx}>
