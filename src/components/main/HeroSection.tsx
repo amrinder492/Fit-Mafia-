@@ -5,11 +5,17 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="w-full max-w-[1600px] mx-auto h-full min-h-[550px] bg-img-hero-section text-black flex flex-col gap-4 justify-center pl-5">
+    <div 
+    style={{backgroundImage: "url('/icons/main/hero-section.png')", 
+      backgroundSize: '60% auto',
+      backgroundPosition: 'right top',
+      backgroundRepeat: 'no-repeat'
+    }}
+     className="w-full max-w-[1600px] mx-auto h-full min-h-[550px] text-black flex flex-col gap-4 justify-center pl-5">
       <div className="w-fit bg-fit-red text-white font-medium px-2 py-1 md:px-5 md:py-3 rounded-full text-sm">
         🔥 Get 10% Off on Your First Tiffin Order
       </div>
-      <div className="w-fit flex flex-col gap-1 md:gap-">
+      <div className="w-fit flex flex-col gap-1">
         <h2 className="text-3xl md:text-[51px] max-lg:pb-2 text-fit-red font-bold">
           Fuel Your Grind with Flavour!
         </h2>
