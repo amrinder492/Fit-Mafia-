@@ -66,7 +66,7 @@ const Carousel = ({ items }: CarouselProps) => {
       {/* Left Button */}
       <button
         onClick={() => scroll("left")}
-        className="absolute top-[30%] bg-white/50 left-0 z-50 flex items-center justify-center w-10 h-10 text-3xl text-fit-red border border-fit-red/50 rounded-full "
+        className="absolute top-[50%] translate-y-[-50%] bg-white/50 left-0 z-50 flex items-center justify-center w-10 h-10 text-3xl text-fit-red border border-fit-red/50 rounded-full "
       >
         <ChevronLeft/>
       </button>
@@ -99,7 +99,7 @@ const Carousel = ({ items }: CarouselProps) => {
       {/* Right Button */}
       <button
         onClick={() => scroll("right")}
-        className="absolute top-[30%] bg-white/50 right-0 z-50 flex items-center justify-center w-10 h-10 text-3xl text-fit-red border border-fit-red/50 rounded-full"
+        className="absolute top-[50%] translate-y-[-50%] bg-white/50 right-0 z-50 flex items-center justify-center w-10 h-10 text-3xl text-fit-red border border-fit-red/50 rounded-full"
       >
         <ChevronRight/>
       </button>
