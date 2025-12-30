@@ -18,6 +18,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { servicesList } from "@/constants/data";
+import Carousel from "./Carousel";
 // import Link from "next/link";
 
 const MenuPreview = () => {
@@ -43,77 +44,7 @@ const MenuPreview = () => {
                 Explore our rotating selection of nutritious, homemade meals — curated by chefs and approved by nutritionists. Every box is designed to balance taste, health, and freshness for your busy lifestyle.
               </p>
             </div>
-            <Swiper
-              loop={true}
-              speed={800}
-              autoplay={{
-                delay: 3500,
-                disableOnInteraction: false,
-              }}
-              spaceBetween={10}
-              breakpoints={{
-                0: {
-                  slidesPerView: 1,
-                //   spaceBetween: 10,
-                },
-                // 375: {
-                //   slidesPerView: 1,
-                // //   spaceBetween: 10,
-                // },
-                // 480: {
-                //   slidesPerView: 1,
-                // //   spaceBetween: 15,
-                // },
-                640: {
-                  slidesPerView: 2,
-                //   spaceBetween: 10,
-                },
-                768: {
-                  slidesPerView: 2,
-                //   spaceBetween: 10,
-                },
-                1024: {
-                  slidesPerView: 3,
-                //   spaceBetween: 30,
-                },
-                1280: {
-                  slidesPerView: 4,
-                  spaceBetween: 35,
-                },
-                // 1536: {
-                //   slidesPerView: 6,
-                //   spaceBetween: 40,
-                // },
-              }}
-              
-              
-              modules={[Autoplay, Navigation]}
-              navigation={true}
-              className="sub-cate-slider w-full max-w-[1200px] mx-auto"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              {item.slides.map((slide, slideIndex) => (
-                <SwiperSlide key={slideIndex}>
-                  {/* <Link href={slide.url || "/"}> */}
-                    <div className=" h-full w-full flex items-center justify-center lg:max-w-[320px] mx-auto flex-col gap-2">
-                    <div className="relative h-[320px] w-full max-w-[320px] rounded-lg overflow-hidden">
-                      <Image
-                        // src={ "/images/17.png"}
-                        // src={ "/plan-images/alpha/1.jpg"}
-                        src={ slide.image}
-                        alt={slide.title}
-                        className=""
-                        fill
-                        style={{objectFit: 'cover'}}
-                      />
-                    </div>
-                      {/* <p className="text-xl md:text-3xl text-center font-semibold w-fit max-w-[320px] mx-auto">{slide.title}</p> */}
-                    </div>
-                  {/* </Link> */}
-                </SwiperSlide>
-              ))}
-            </Swiper>
+           <Carousel items={item?.slides} />
           </div>
         ))}
       </div>
