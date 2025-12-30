@@ -1,5 +1,20 @@
 import { CarouselItem } from "@/lib/types";
 
+export const linkAccount = [
+    { url: "/weekly-menu", text: "Weekly menu" },
+    { url: "/our-plans", text: "Our Plans" },
+    { url: "/how-it-works", text: "How It Works" },
+    { url: "/privacy-policy", text: "Terms & Conditions" },
+    { url: "/privacy-policy", text: "Privacy Policy" },
+    { url: "/faqs", text: "FAQs" },
+  ];
+
+export const linkShop = [
+    { url: "/our-plans", text: "Search" },
+    { url: "/our-plans", text: "Meal Plans" },
+    { url: "/our-plans", text: "All Tiffins" },
+  ];
+
 export const featuresData = [
     {
       title: "Fresh, Never-Frozen Prepared Meals",
@@ -269,5 +284,109 @@ export const featuresData = [
       imageUrl: "/plan-images/hustler/5.jpg",
       title: "🥘 Chicken Biryani",
       description: "Served with Raita",
+    },
+  ];
+
+  export const mealDetailsData = [
+    {
+      img: "/temp/Weekly-meals.png",
+      title: "Perfect for Busy Professionals",
+      desc: "You don’t need to meal prep or cook — we do it all for you.",
+    },
+    {
+      img: "/temp/Weekly-meals.png",
+      title: "Nutritionist-Approved",
+      desc: "All meals are curated by chefs and reviewed by certified nutritionists.",
+    },
+    {
+      img: "/temp/Weekly-meals.png",
+      title: "Variety Every Week",
+      desc: "Our rotating menu keeps your meals exciting, never boring.",
+    },
+    {
+      img: "/temp/Weekly-meals.png",
+      title: "Home-Style, With a Healthy Twist",
+      desc: "Enjoy the comfort of homemade food with the benefits of clean ingredients.",
+    },
+    {
+      img: "/temp/Weekly-meals.png",
+      title: "Cancel, Skip, or Pause Anytime",
+      desc: "You’re in control. No lock-ins. No guilt.",
+    },
+  ];
+
+  export  const servicesList = [
+    {
+      serviceName: "This Week’s Menu",
+      serviceDescription:
+        " Explore our weekly lineup of chef-crafted, nutritionist-approved meals — thoughtfully made to power your day with flavor, freshness, and fuel. No guesswork, just clean eating that tastes like home.",
+      slides: [
+        {
+        //   url: "/services/android-app-development",
+          image: "/plan-images/alpha/1.jpg",
+          title: "PB Sandwich",
+        },
+        {
+          image: "/plan-images/alpha/2.jpg",
+          title: "Chickpea Salad",
+        },
+        {
+          image: "/plan-images/alpha/3.jpg",
+          title: "Oats/Sweet Potato",
+        },
+        {
+          image: "/plan-images/alpha/4.jpg",
+          title: "Cheese Salad",
+        },
+        {
+          image: "/plan-images/alpha/5.jpg",
+          title: "Fruits Salad",
+        },
+        {
+          image: "/plan-images/avengers/1.jpg",
+          title: "PB Sandwich, Chicken",
+        },
+        {
+          image: "/plan-images/avengers/2.jpg",
+          title: "Sandwich",
+        },
+        {
+          image: "/plan-images/avengers/3.jpg",
+          title: "Sandwich",
+        },
+        {
+          image: "/plan-images/avengers/4.jpg",
+          title: "Sandwich",
+        },
+        {
+          image: "/plan-images/avengers/5.jpg",
+          title: "Sandwich",
+        },
+        
+        
+      ],
+    },
+  ];
+
+export const testimonials = [
+    {
+      name: "Anita Sharma",
+      text: "The tiffin service has been a lifesaver for my busy workdays. The food tastes just like home, and it's always delivered fresh and on time.",
+      stars: 5,
+    },
+    {
+      name: "Ravi Patel",
+      text: "I’ve tried multiple tiffin services, but this one stands out! Delicious meals, generous portions, and great value for money.",
+      stars: 4,
+    },
+    {
+      name: "Priya Mehta",
+      text: "As a student living away from home, this service gives me comfort. The meals are healthy, homemade, and super convenient!",
+      stars: 5,
+    },
+    {
+      name: "Suresh Iyer",
+      text: "Their variety and quality are top-notch. I love the rotating menu and how they cater to different dietary needs. Highly recommend!",
+      stars: 5,
     },
   ];

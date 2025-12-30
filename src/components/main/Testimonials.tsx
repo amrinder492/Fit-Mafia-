@@ -4,29 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-
-const testimonials = [
-  {
-    name: "Anita Sharma",
-    text: "The tiffin service has been a lifesaver for my busy workdays. The food tastes just like home, and it's always delivered fresh and on time.",
-    stars: 5,
-  },
-  {
-    name: "Ravi Patel",
-    text: "I’ve tried multiple tiffin services, but this one stands out! Delicious meals, generous portions, and great value for money.",
-    stars: 4,
-  },
-  {
-    name: "Priya Mehta",
-    text: "As a student living away from home, this service gives me comfort. The meals are healthy, homemade, and super convenient!",
-    stars: 5,
-  },
-  {
-    name: "Suresh Iyer",
-    text: "Their variety and quality are top-notch. I love the rotating menu and how they cater to different dietary needs. Highly recommend!",
-    stars: 5,
-  },
-];
+import { testimonials } from "@/constants/data";
 
 const StarIcon = () => (
   <svg
@@ -70,7 +48,7 @@ export default function Testimonials() {
               800: { slidesPerView: 2 },
             }}
           >
-            {testimonials.map((t, i) => (
+            {testimonials?.map((t, i) => (
               <SwiperSlide key={i}>
                 <div className="p-8 text-center h-full">
                   <p className="font-bold uppercase mb-4">{t.name}</p>

@@ -1,5 +1,6 @@
 "use client"
 
+import { linkAccount, linkShop } from "@/constants/data";
 // import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 // import { SubmitHandler, useForm } from "react-hook-form";
@@ -7,22 +8,6 @@ import Link from "next/link";
 // import axios from "axios";
 // import { toast } from "react-toastify";
 
-
-
-  const linkAccount = [
-    { url: "/weekly-menu", text: "Weekly menu" },
-    { url: "/our-plans", text: "Our Plans" },
-    { url: "/how-it-works", text: "How It Works" },
-    { url: "/privacy-policy", text: "Terms & Conditions" },
-    { url: "/privacy-policy", text: "Privacy Policy" },
-    { url: "/faqs", text: "FAQs" },
-  ];
-
-  const linkShop = [
-    { url: "/our-plans", text: "Search" },
-    { url: "/our-plans", text: "Meal Plans" },
-    { url: "/our-plans", text: "All Tiffins" },
-  ];
 
   // interface FormValues {
   // phoneNumber: string;
@@ -63,7 +48,7 @@ const Footer = () => {
               Fit Mafia
             </span>
             <div className="flex flex-wrap gap-3 sm:gap-8 w-full">
-              {linkAccount.map((e, i) => {
+              {linkAccount?.map((e, i) => {
                 return (
                   <Link
                     key={i}
@@ -83,7 +68,7 @@ const Footer = () => {
               Shop
             </span>
             <div className="flex  gap-3">
-              {linkShop.map((e, i) => {
+              {linkShop?.map((e, i) => {
                 return (
                   <Link
                     key={i}
