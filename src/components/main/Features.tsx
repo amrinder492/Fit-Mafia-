@@ -1,29 +1,9 @@
 import React from "react";
 import GetBtn from "../buttons/GetBtn";
 import Image from "next/image";
+import { featuresData } from "@/constants/data";
 
 const Features = () => {
-    const cardData = [
-        {
-          title: "Fresh, Never-Frozen Prepared Meals",
-          description:
-            "Serving up the freshest ingredients from our network of trusted partners. No nitrates, no refined sugars, and meat raised without antibiotics.",
-          image: "/plan-images/single/11.jpg",
-        },
-        {
-            title: "Chef-Crafted Meal Delivery",
-            description:
-            "Enjoy nutritious, restaurant-quality premade meals at home. Crafted by our team of culinary experts.",
-            image: "/plan-images/single/12.jpg",
-        },
-        {
-            title: "Nutritious Meals Designed by Dietitians",
-            description:
-            "Our registered dietitians work hand-in-hand with our chefs to ensure every meal is packed with premium, healthy ingredients.",
-            image: "/plan-images/single/18.jpg",
-        },
-      ];
-
   return (
     <div className="w-full max-w-[1600px] mx-auto h-full flex flex-col gap-10 lg:gap-16 justify-center bg-[#F1F1EA] pt-10 pb-5 px-5 ">
       <h3 className="font-bold text-3xl w-fit text-center mx-auto">
@@ -31,12 +11,10 @@ const Features = () => {
       </h3>
 
       <div className="w-full flex justify-evenly gap-5 flex-wrap">
-
-        {cardData.map((e,i) => {
+        {featuresData?.map((e,i) => {
             return ( <div key={i} className="md:w-[30%] max-w-[384px] bg-white border border-gray-200 rounded-lg shadow-sm ">
                 <div className="relative w-full rounded-t-lg h-96">
                   <Image
-                    // src="/images/paneer-masala.avif"
                     src={e.image}
                     alt=""
                     fill
