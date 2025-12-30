@@ -25,8 +25,8 @@ const Features = () => {
       ];
 
   return (
-    <div className="w-full max-w-[1600px] mx-auto h-full flex flex-col gap-16 justify-center bg-[#F1F1EA] pt-10 pb-5 px-5 ">
-      <h3 className="font-bold text-3xl w-fit mx-auto">
+    <div className="w-full max-w-[1600px] mx-auto h-full flex flex-col gap-10 lg:gap-16 justify-center bg-[#F1F1EA] pt-10 pb-5 px-5 ">
+      <h3 className="font-bold text-3xl w-fit text-center mx-auto">
         Fresh. Healthy. And incredibly delicious.
       </h3>
 
@@ -34,7 +34,7 @@ const Features = () => {
 
         {cardData.map((e,i) => {
             return ( <div key={i} className="md:w-[30%] max-w-[384px] bg-white border border-gray-200 rounded-lg shadow-sm ">
-                <div className="relative w-full rounded-t-lg h-56">
+                <div className="relative w-full rounded-t-lg h-96">
                   <Image
                     // src="/images/paneer-masala.avif"
                     src={e.image}
