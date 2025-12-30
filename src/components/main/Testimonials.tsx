@@ -56,9 +56,9 @@ const StarIcon = () => (
 
 export default function Testimonials() {
   return (
-    <div className="bg-slate-100 pt-5 w-full h-full ">
+    <div className="bg-slate-100 py-12 w-full h-full ">
       {/* <span className="bg-slate-100 pt-5 w-full h-full "> */}
-        <h2 className=" font-black text-black text-center text-3xl leading-none uppercase max-w-2xl mx-auto mb-4">
+        <h2 className=" font-black text-black text-center text-2xl lg:text-3xl leading-none uppercase max-w-2xl mx-auto mb-4">
           What Our Customers Say
         </h2>
       {/* </span> */}
@@ -89,7 +89,10 @@ export default function Testimonials() {
                 800: { slidesPerView: 2 },
                 //   1024: { slidesPerView: 3 },
               }}
-              className="scroll-smooth"
+              className="scroll-smooth
+    pb-12
+   [&_.swiper-pagination]:bottom-[-20px]
+"
             >
               {testimonials.map((t, i) => (
                 <SwiperSlide key={i}>
