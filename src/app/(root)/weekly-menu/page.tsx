@@ -134,7 +134,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="w-full h-full flex justify-center py-4 pt-5 sticky bottom-0 bg-[#F1F1EA]">
+        <div className="w-full h-full flex justify-center z-50 py-4 pt-5 sticky bottom-0 bg-[#F1F1EA]">
           <GetBtn link="/our-plans" content="Order Now" className="" />
         </div>
 
