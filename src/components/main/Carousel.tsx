@@ -1,108 +1,65 @@
 "use client";
-import { useEffect, useRef } from "react";
 import { CarouselProps } from "@/lib/types";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import Image from "next/image";
 
 const Carousel = ({ items }: CarouselProps) => {
-  const carouselRef = useRef<HTMLDivElement | null>(null);
-
-  // const scroll = (direction: "left" | "right") => {
-  //   if (carouselRef.current) {
-  //     const scrollAmount = 268; // 262px card + 6px gap
-  //     carouselRef.current.scrollBy({
-  //       left: direction === "left" ? -scrollAmount : scrollAmount,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // };
-
-  const scroll = (direction: "left" | "right") => {
-    if (carouselRef.current) {
-      const scrollAmount = 268; // 262px card + 6px gap
-      const container = carouselRef.current;
-  
-      if (direction === "left") {
-        if (container.scrollLeft === 0) {
-          // Scroll to end if at start
-          container.scrollTo({
-            left: container.scrollWidth,
-            behavior: "smooth",
-          });
-        } else {
-          container.scrollBy({
-            left: -scrollAmount,
-            behavior: "smooth",
-          });
-        }
-      } else {
-        const maxScrollLeft = container.scrollWidth - container.clientWidth;
-        if (Math.ceil(container.scrollLeft) >= maxScrollLeft) {
-          // Scroll to start if at end
-          container.scrollTo({
-            left: 0,
-            behavior: "smooth",
-          });
-        } else {
-          container.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth",
-          });
-        }
-      }
-    }
-  };
-
-  useEffect(() => {
-  const interval = setInterval(() => {
-    scroll("right");
-  }, 4000); // Scroll every 4 seconds
-
-  return () => clearInterval(interval); // Clean up on unmount
-}, []);
-
-  
   return (
-    <div className="relative flex w-full max-w-[1600px] items-center mx-auto gap-3 justify-center">
-      {/* Left Button */}
-      <button
-        onClick={() => scroll("left")}
-        className="absolute top-[50%] translate-y-[-50%] bg-white/50 left-0 z-50 flex items-center justify-center w-10 h-10 text-3xl text-fit-red border border-fit-red/50 rounded-full "
-      >
-        <ChevronLeft/>
-      </button>
-
-      {/* Scrollable container */}
-      <div
-        ref={carouselRef}
-        className="flex overflow-x-auto scrollbar-hide scroll-smooth max-w-[1440px] w-auto gap-6 mx-2 md:mx-10"
-      >
-        {items.map((item, index) => {
-
-          return (
-            <div
-              key={index}
-              style={{ backgroundImage: `url(${item.imageUrl})` }}
-              className={`relative w-[262px] h-[325px] rounded-md bg-cover bg-center flex items-end justify-start p-4 shrink-0`}
+    <div className="relative flex w-full max-w-[1600px] items-center mx-auto gap-3  justify-center">
+      <Swiper
+              loop={true}
+              speed={800}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              spaceBetween={10}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                640: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 2,
+                },
+                1024: {
+                  slidesPerView: 3,
+                }
+              }}
+              
+              
+              modules={[Autoplay, Navigation]}
+              navigation={true}
+              className="sub-cate-slider w-full max-w-[1200px] mx-auto"
+              data-aos="fade-up"
+              data-aos-delay="200"
             >
-              <div className="z-10 flex flex-col text-white">
-                {/* <h2 className="text-3xl md:text-4xl font-bold font-Arial">{item.title}</h2>
-                <span className="text-base md:text-xl font-semibold md:font-bold font-Arial">
-                  {item.description}
-                </span> */}
-              </div>
-              {/* <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-black to-transparent"></div> */}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Right Button */}
-      <button
-        onClick={() => scroll("right")}
-        className="absolute top-[50%] translate-y-[-50%] bg-white/50 right-0 z-50 flex items-center justify-center w-10 h-10 text-3xl text-fit-red border border-fit-red/50 rounded-full"
-      >
-        <ChevronRight/>
-      </button>
+              {items.map((slide, slideIndex) => (
+                <SwiperSlide key={slideIndex}>
+                  {/* <Link href={slide.url || "/"}> */}
+                    <div className=" h-full w-full flex items-center justify-center lg:max-w-[320px] mx-auto flex-col gap-2">
+                    <div className="relative h-[320px] w-full max-w-[320px] rounded-lg overflow-hidden">
+                      <Image
+                        // src={ "/images/17.png"}
+                        // src={ "/plan-images/alpha/1.jpg"}
+                        src={ slide.imageUrl}
+                        alt={"img"}
+                        className=""
+                        fill
+                        style={{objectFit: 'cover'}}
+                      />
+                    </div>
+                      {/* <p className="text-xl md:text-3xl text-center font-semibold w-fit max-w-[320px] mx-auto">{slide.title}</p> */}
+                    </div>
+                  {/* </Link> */}
+                </SwiperSlide>
+              ))}
+            </Swiper>
     </div>
   );
 };
