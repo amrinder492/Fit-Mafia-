@@ -47,7 +47,7 @@ const Page = () => {
                 else setFilterData([]);
               }}
               key={data.title}
-              // img={data.img}
+              icon={data.icon}
               title={data.title}
               className={` transition-all duration-300 ${
                 isActive

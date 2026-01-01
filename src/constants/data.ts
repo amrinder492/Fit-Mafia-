@@ -576,10 +576,10 @@ export const testimonials = [
   ];
 
  export const faqs = [
-    { img: "", value: "orderingAndPlansFaqs", title: "💼 Ordering & Plans" },
-    { img: "", value: "mealsAndNutritionFaqs", title: "🥗 Meals & Nutrition" },
-    { img: "", value: "deliveryFaqs", title: "🚚 Delivery" },
-    { img: "", value: "paymentsAndSupportFaqs", title: "💳 Payments & Support" },
+    { icon: "💼", value: "orderingAndPlansFaqs", title: "Ordering & Plans" },
+    { icon: "🥗", value: "mealsAndNutritionFaqs", title: "Meals & Nutrition" },
+    { icon: "🚚", value: "deliveryFaqs", title: "Delivery" },
+    { icon: "💳", value: "paymentsAndSupportFaqs", title: "Payments & Support" },
     // { img: '', value: '', title: "🧠 Still Got Questions?", },
   ];
   
