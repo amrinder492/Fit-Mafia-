@@ -27,6 +27,8 @@ const Header = () => {
                 src={"/icons/header/logo.png"}
                 alt="logo"
                 fill
+                priority
+                sizes="64px"
                 style={{ objectFit: "cover" }}
               />
             </Link>
@@ -91,14 +93,17 @@ const Header = () => {
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="text-red-700" /> : <AlignJustify />}
           </button>
-          <Link href={'/'} className="relative h-10 w-16 rounded-lg overflow-hidden">
-            <Image
-              src={"/icons/header/logo.png"}
-              alt="logo"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </Link>
+          <Link href="/" className="relative h-10 w-16 rounded-lg overflow-hidden">
+  <Image
+    src="/icons/header/logo.png"
+    alt="logo"
+    fill
+    priority
+    sizes="64px"
+    style={{ objectFit: "cover" }}
+  />
+</Link>
+
           {status ? <ProfilePopover/> 
           : <Link href={"/sign-in"} className="px-3 py-1 border border-fit-red rounded-md " >
             Login
