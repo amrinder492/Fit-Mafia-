@@ -2,78 +2,9 @@
 
 import FaqAccordion from "@/components/main/FaqAccordion";
 import FaqCard from "@/components/main/FaqCard";
+import { deliveryFaqs, faqs, mealsAndNutritionFaqs, orderingAndPlansFaqs, paymentsAndSupportFaqs } from "@/constants/data";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
-const faqs = [
-  { img: "", value: "orderingAndPlansFaqs", title: "💼 Ordering & Plans" },
-  { img: "", value: "mealsAndNutritionFaqs", title: "🥗 Meals & Nutrition" },
-  { img: "", value: "deliveryFaqs", title: "🚚 Delivery" },
-  { img: "", value: "paymentsAndSupportFaqs", title: "💳 Payments & Support" },
-  // { img: '', value: '', title: "🧠 Still Got Questions?", },
-];
-
-const orderingAndPlansFaqs = [
-  {
-    question: "How do I start my Fit Mafia subscription?",
-    answer:
-      'Just head to our "Create Your Box" page, choose your meal plan (weekly or monthly), select your preferences (veg/non-veg/mixed), and you’re good to go!',
-  },
-  {
-    question: "Can I skip a week or pause my subscription?",
-    answer:
-      "Yes! Life gets busy — you can pause, skip, or cancel your plan anytime through your account dashboard.",
-  },
-  {
-    question: "Do I need to commit long-term?",
-    answer:
-      "Not at all. There are no contracts or commitments. You’re free to change your plan as needed.",
-  },
-];
-
-const mealsAndNutritionFaqs = [
-  {
-    question: "Are your meals healthy?",
-    answer:
-      "100%. All our meals are dietitian-approved, balanced with protein, fiber, good fats, and whole grains. They’re made to fuel your body without sacrificing taste.",
-  },
-  {
-    question: "Do you offer vegetarian or vegan meals?",
-    answer:
-      "Yes! We offer vegetarian, non-vegetarian, and mixed plans. While we don’t offer full vegan boxes yet, many of our meals are plant-forward.",
-  },
-  {
-    question: "Are meals fresh or frozen?",
-    answer:
-      "Meals are cooked fresh daily and delivered chilled for optimal freshness. Just heat and eat!",
-  },
-];
-
-const deliveryFaqs = [
-  {
-    question: "When and where do you deliver?",
-    answer:
-      "We deliver daily (or as per your plan) to homes, offices, and selected locations. You’ll get an exact schedule based on your area after signing up.",
-  },
-  {
-    question: "What if I’m not home during delivery?",
-    answer:
-      "No worries — we use insulated packaging to keep your meals safe and fresh. You can also request office delivery or change your drop-off time.",
-  },
-];
-
-const paymentsAndSupportFaqs = [
-  {
-    question: "How do I pay?",
-    answer:
-      "We accept all major debit/credit cards, e-transfers. Subscriptions auto-renew weekly or monthly, but you can manage everything from your account.",
-  },
-  {
-    question: "Who do I contact if I have an issue?",
-    answer:
-      'Our customer support team is always here to help. Reach us via WhatsApp, email, or through the "Contact Us" page for any questions or concerns.',
-  },
-];
 
 type Faq = { question: string; answer: string };
 const Page = () => {
