@@ -6,8 +6,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const Carousel = ({ items }: CarouselProps) => {
+  const [openDescription, setOpenDescription] = useState<Number>()
+  const handleMouseEnter = (currIndex: number) => {
+    setOpenDescription(currIndex)
+  }
   return (
     <div className="relative flex w-full max-w-[1600px] items-center mx-auto gap-3  justify-center">
       <button
@@ -51,7 +56,7 @@ const Carousel = ({ items }: CarouselProps) => {
         {items.map((slide, slideIndex) => (
           <SwiperSlide key={slideIndex}>
             {/* <Link href={slide.url || "/"}> */}
-            <div className=" h-full w-full flex items-center justify-center lg:max-w-[320px] mx-auto flex-col gap-2">
+            <div onMouseEnter={() => handleMouseEnter(slideIndex)} className=" h-full bg-white w-full flex items-center justify-center lg:max-w-[320px] mx-auto flex-col gap-2">
               <div className="relative h-[400px] w-full max-w-[320px] rounded-lg overflow-hidden">
                 <Image
                   src={slide?.imageUrl ?? slide?.image ?? ''}
@@ -60,8 +65,14 @@ const Carousel = ({ items }: CarouselProps) => {
                   fill
                   style={{ objectFit: "cover" }}
                 />
+              {openDescription === slideIndex &&
+              <div className="absolute w-full h-full px-2 text-white flex flex-col items-center justify-center gap-6 bg-black/70">
+              <h2 className="text-xl md:text-3xl text-center font-semibold w-fit border-b-2 border-red-600  mx-auto ">{slide.title}</h2>
+              <p className=" mx-auto text-center">{slide?.description}</p>
+              </div>}
               </div>
-              {/* <p className="text-xl md:text-3xl text-center font-semibold w-fit max-w-[320px] mx-auto">{slide.title}</p> */}
+              {/* {openDescription === slideIndex &&
+} */}
             </div>
             {/* </Link> */}
           </SwiperSlide>
