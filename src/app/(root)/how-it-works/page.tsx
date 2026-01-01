@@ -38,7 +38,7 @@ const page = () => {
       </div>
 
       {/* Fit Mafia meals in 3 steps */}
-      <div className="flex flex-col min-h-[632px] h-auto items-center gap-7 xl:gap-10">
+      <div className="flex flex-col min-h-[632px] h-auto py-8 items-center gap-7 xl:gap-10">
         <h2 className="text-black font-Arial text-4xl font-bold text-center h-fit flex justify-center">
           Our Service in 3 Steps
         </h2>
