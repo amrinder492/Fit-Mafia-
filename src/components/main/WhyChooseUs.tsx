@@ -7,8 +7,8 @@ const WhyChooseUs = () => {
     <div>
       {/* why choose */}
       <section className="bg-fit-red text-white h-full pt-6 lg:pt-0">
-          <div className="flex flex-col lg:flex-row justify-between gap-5 px-10 md:px-16">
-            <div className="md:w-1/3 h-56 lg:h-auto relative md:pt-5 w-full flex justify-center items-center">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-5 px-10 md:px-16">
+            <div className="md:w-1/3 h-56 relative md:pt-5 w-full flex justify-center items-center">
             <Image
   src="/plan-images/single/2.jpg"
   alt="image"
