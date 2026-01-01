@@ -63,8 +63,8 @@ const Page = () => {
             Get Up to 25% Off Our Ready-Made Meals
           </h1>
           <span className="text-[#4b4d4c] text-center">
-            Get fully-prepared, gourmet meals delivered to your doorstep. No
-            commitment necessary—skip or cancel at any time.
+            Get fully prepared, gourmet meals delivered to your doorstep. No
+            commitment necessary, skip or cancel at any time.
           </span>
           <button
             // type="submit"
