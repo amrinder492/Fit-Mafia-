@@ -1,8 +1,9 @@
 import GetBtn from "@/components/buttons/GetBtn";
 import Carousel from "@/components/main/Carousel";
 import MealCard from "@/components/main/MealCard";
+import ReadyMeals from "@/components/main/ReadyMeals";
 import WeekSelector from "@/components/main/WeekSlector";
-import { addOnesData, alphaData, avengersData, hustlerData, mealsData, spartansData, warriorData } from "@/constants/data";
+import { alphaData, avengersData, hustlerData, mealsData, spartansData, warriorData } from "@/constants/data";
 // import Image from 'next/image'
 import React from "react";
 
@@ -114,24 +115,7 @@ const Page = () => {
           </div>
 
           {/* // Ready Meals  */}
-          <div className="flex flex-col w-full gap-4 px-4 ">
-            <div className="flex flex-wrap items-center justify-center w-full h-full gap-3 sm:gap-5 xl:gap-8">
-              {/* // Cards  */}
-              {addOnesData?.map((item, i) => (
-                <MealCard
-                  key={i}
-                  cover={true}
-                  image={item.image}
-                  title={item.title}
-                  desc={item.desc}
-                />
-              ))}
-            </div>
-
-            <button className="px-4 py-2 mx-auto text-base font-semibold border rounded-lg border-fit-red w-fit text-fit-red hover:bg-fit-red hover:text-white">
-              Load more meals
-            </button>
-          </div>
+        <ReadyMeals />
         </div>
 
         <div className="w-full h-full flex justify-center z-50 py-4 pt-5 sticky bottom-0 bg-[#F1F1EA]">
