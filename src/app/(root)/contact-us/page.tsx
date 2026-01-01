@@ -2,6 +2,7 @@
 
 import ContactUsCard from "@/components/main/ContactUsCard";
 import ContactUsForm from "@/components/main/ContactUsForm";
+import Image from "next/image";
 import { useState } from "react";
 
 
@@ -40,7 +41,9 @@ const Page = () => {
             via chat or phone at +1 807 790 2770.
           </span>
           <div className="w-full p-4 min-h-[81px] bg-white flex items-center gap-3 shadow-md rounded-md">
-            <img src="/images/ask-q.png" alt="ask" className="h-6 w-6" />
+            <div className="h-6 w-6 relative">
+            <Image src="/images/ask-q.png" alt="ask" fill sizes="24px" className="object-contain" />
+            </div>
             <button onClick={()=> handleclick()} className="font-Helvetica font-bold text-[16px] leading-[24px] text-black">
               Ask any question
             </button>
@@ -48,11 +51,13 @@ const Page = () => {
             
             {showForm &&  <ContactUsForm fc={handleclick} /> }
         </div>
-        <div className="min-h-[314px] max-w-[471px] w-full h-full overflow-hidden">
-          <img
+        <div className="min-h-[314px] relative max-w-[471px] w-full h-full overflow-hidden">
+          <Image
             src="/temp/ca-contact-us-body-image.jpg"
-            alt=""
-            className="w-full h-full"
+            alt="contact-us"
+            fill
+            className="object-contain"
+            sizes="(max-width: 471px) 100vw, 471px"
           />
         </div>
       </div>

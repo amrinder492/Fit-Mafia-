@@ -86,16 +86,24 @@ const Page = () => {
               scheduled deliveries.
             </span>
             {/* <div className="w-full flex sm:flex-row flex-col gap-3">
-              <img
+              <div className="w-30 h-10 relative">
+              <Image
                 src="/temp/appstore-badge-en.png"
                 alt="appstore"
-                className="w-30 h-10"
+                fill
+                className="object-contain"
+                sizes="120px"
               />
-              <img
+              </div>
+             <div className="w-30 h-10 relative">
+              <Image
                 src="/temp/playstore-badge-en.png"
-                alt="playstore"
-                className="w-30 h-10"
+                alt="appstore"
+                fill
+                className="object-contain"
+                sizes="120px"
               />
+              </div>
             </div> */}
           </div>
         </div>

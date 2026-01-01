@@ -55,11 +55,15 @@ const page = () => {
           <div className="flex-[0.5] flex flex-col gap-3 px-6 md:px-12">
             {/* step 1 */}
             <div className="flex gap-4">
-              <img
+              <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 1: Choose Your Plan
@@ -74,11 +78,15 @@ const page = () => {
             </div>
             {/* step 2 */}
             <div className="flex gap-4">
-              <img
+            <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 2: Customize Your Box
@@ -93,11 +101,15 @@ const page = () => {
             </div>
             {/* step 3 */}
             <div className="flex gap-4">
-              <img
+            <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 3: Delivered Fresh to Your Door
@@ -112,11 +124,15 @@ const page = () => {
             </div>
             {/* step 4 */}
             <div className="flex gap-4">
-              <img
+            <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 4: Heat, Eat & Thrive
