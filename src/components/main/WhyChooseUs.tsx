@@ -6,8 +6,8 @@ const WhyChooseUs = () => {
   return (
     <div>
       {/* why choose */}
-      <section className="bg-fit-red text-white h-full">
-          <div className="flex max-md:flex-wrap justify-between gap-5 px-10 md:px-16">
+      <section className="bg-fit-red text-white h-full pt-6 lg:pt-0">
+          <div className="flex flex-col lg:flex-row justify-between gap-5 px-10 md:px-16">
             <div className="md:w-1/3  max-md:pt-5 w-full flex justify-center items-center">
               <div className="relative rounded-lg overflow-hidden h-[200px] sm:h-[250px] md:h- [300px] w-full my-auto">
                 <Image
