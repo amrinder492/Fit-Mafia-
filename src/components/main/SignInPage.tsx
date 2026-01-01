@@ -48,7 +48,7 @@ const SignInPage = () => {
 
   return (
     <div className="h-[calc(100vh-56px)] flex items-start justify-center bg-[#f1f1ea]">
-      <div className="max-w-[1100px] h-full w-full flex items-center lg:items-start gap-6 justify-center px-3 py-6 flex-col lg:flex-row">
+      <div className="max-w-[1100px] h-full w-full flex items-center gap-6 justify-center px-3 py-6 flex-col lg:flex-row">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="p-6 bg-white rounded-lg shadow-lg h-auto min-h-[432px] max-w-[424px] w-full gap-3 flex-[0.5] flex flex-col items-center"
@@ -112,7 +112,7 @@ const SignInPage = () => {
           </button>
           <p className="mt-4 text-center text-black">
             New to Fit Mafia?
-            <Link className="text-fit-red/80" href="/sign-up">
+            <Link className="text-fit-red/80 pl-2" href="/sign-up">
               Sign Up Here
             </Link>
           </p>
