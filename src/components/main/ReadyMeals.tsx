@@ -35,14 +35,13 @@ const ReadyMeals = () => {
         ))}
       </div>
 
-      {showMealsCount < addOnesData.length && (
         <button
-          onClick={() => setShowMealsCount(prev => prev + LOAD_MORE_STEP)}
+          onClick={() => setShowMealsCount(showMealsCount < addOnesData.length ? prev => prev + LOAD_MORE_STEP : INITIAL_MEALS )}
           className="px-4 py-2 mx-auto text-base font-semibold border rounded-lg border-fit-red w-fit text-fit-red hover:bg-fit-red hover:text-white"
         >
-          Load more meals
+         {showMealsCount < addOnesData.length ? 'Load more meals' : 'Load less meals'}
         </button>
-      )}
+      
     </div>
   )
 }
