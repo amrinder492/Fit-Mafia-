@@ -5,6 +5,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { testimonials } from "@/constants/data";
+import Image from "next/image";
 
 const StarIcon = () => (
   <svg
@@ -26,12 +27,16 @@ export default function Testimonials() {
       <div className="flex max-w-[1600px] mx-auto px-4 items-center">
         {/* Left image */}
         <div className="hidden sm:block w-1/3">
-          <img
-            src="/plan-images/spartans/6.jpg"
-            alt="Food"
-            className="max-h-[280px] mx-auto rounded-xl"
-          />
-        </div>
+  <Image
+    src="/plan-images/spartans/6.jpg"
+    alt="Food"
+    width={400}
+    height={280}
+    className="mx-auto rounded-xl object-contain"
+    sizes="(min-width: 640px) 33vw, 0px"
+    priority={true}
+  />
+</div>
 
         {/* Slider */}
         <div className="sm:w-2/3 w-full">

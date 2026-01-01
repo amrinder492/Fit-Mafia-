@@ -104,8 +104,8 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col w-full gap-4">
-          <div className="w-fit flex flex-col gap-2 px-4 h-[70px] mx-3 md:mx-10 ">
+        <div className="flex flex-col w-full gap-4 px-4 py-4">
+          <div className="w-fit flex flex-col gap-2 px-10 h-[70px] mx-3 md:mx-10 ">
             <h2 className="text-lg font-semibold sm:text-xl ">Add-ons</h2>
             <h4 className="text-sm sm:text-base ">
               You’re not limited to just the meals, you can add other goodies to

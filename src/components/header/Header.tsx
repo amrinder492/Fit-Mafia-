@@ -88,7 +88,7 @@ const Header = () => {
       </div>
 
       {/* // Mobile Header */}
-      <div className="w-full block lg:hidden ">
+      <div className="w-full block md:hidden ">
         <div className="w-full flex justify-between items-center gap-4 ">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="text-red-700" /> : <AlignJustify />}
