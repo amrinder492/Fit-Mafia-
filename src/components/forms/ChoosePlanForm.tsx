@@ -318,7 +318,7 @@ const ChoosePlanForm = ({
                           className="w-full h-[100px] bg-white border border-gray-300 rounded-md flex flex-col items-center justify-center px-3 gap-3 cursor-pointer transition-all 
                   peer-checked:border-[#BF1C15] peer-checked:border-2"
                         >
-                          <div className="flex gap-1">
+                          <div className="flex gap-3">
                              <img src={pref.img} alt="icon" className="h-7 w-7" />
                             <h4 className="px- 2 text-center text-black font-medium tracking-wider text-2xl capitalize">
                               {pref.label}
