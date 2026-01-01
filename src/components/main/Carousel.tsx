@@ -57,7 +57,7 @@ const Carousel = ({ items }: CarouselProps) => {
         {items.map((slide, slideIndex) => (
           <SwiperSlide key={slideIndex}>
             {/* <Link href={slide.url || "/"}> */}
-            <div onMouseEnter={() => handleMouseEnter(slideIndex)} className=" h-full bg-white w-full flex items-center justify-center lg:max-w-[320px] mx-auto flex-col gap-2">
+            <div onMouseEnter={() => handleMouseEnter(slideIndex)} className=" h-full w-full flex items-center justify-center lg:max-w-[320px] mx-auto flex-col gap-2">
               <div className="relative h-[400px] w-full max-w-[320px] rounded-lg overflow-hidden">
                 <Image
                   src={slide?.imageUrl ?? slide?.image ?? ''}
