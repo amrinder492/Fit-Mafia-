@@ -240,7 +240,7 @@ const Page = () => {
                     />
                     <label
                       htmlFor="mix"
-                      className="w-full max-w-[184px] h-[104px] bg-white border border-gray-300 rounded-md flex flex-col items-center justify-center px-3 gap-1 cursor-pointer transition-all 
+                      className="w-full lg:max-w-[184px] h-[104px] bg-white border border-gray-300 rounded-md flex flex-col items-center justify-center px-3 gap-1 cursor-pointer transition-all 
         peer-checked:border-[#BF1C15] peer-checked:border-2 box-border"
                     >
                       <img
@@ -264,7 +264,7 @@ const Page = () => {
                     />
                     <label
                       htmlFor="trucker"
-                      className="w-full max-w-[184px] h-[104px] bg-white border border-gray-300 rounded-md flex flex-col items-center justify-center px-3 gap-1 cursor-pointer transition-all 
+                      className="w-full lg:max-w-[184px] h-[104px] bg-white border border-gray-300 rounded-md flex flex-col items-center justify-center px-3 gap-1 cursor-pointer transition-all 
         peer-checked:border-[#BF1C15] peer-checked:border-2 box-border"
                     >
                       <img
