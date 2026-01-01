@@ -2,11 +2,7 @@
 
 import axios from "axios";
 import {
-  AlignJustify,
-  // ChevronDown,
-  // Search,
-  // ShoppingCart,
-  // User,
+  AlignJustify, X
 } from "lucide-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
@@ -93,7 +89,7 @@ const Header = () => {
       <div className="w-full hidden max-md:block ">
         <div className="w-full flex justify-between items-center gap-4 ">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <AlignJustify />
+            {isOpen ? <X className="text-red-700" /> : <AlignJustify />}
           </button>
           <Link href={'/'} className="relative h-10 w-16 rounded-lg overflow-hidden">
             <Image
