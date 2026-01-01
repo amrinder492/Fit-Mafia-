@@ -21,7 +21,7 @@ const FaqAccordion = ({ faqs }: { faqs: FaqItem[] }) => {
       <h2 className="flex justify-center text-4xl font-bold text-center text-black font-Arial">
         ❓ Common Questions
       </h2>
-      <div className="flex flex-col max-w-[1144px] gap-6 w-full font-medium text-black text-base tracking-wide">
+      <div className="flex flex-col lg:max-w-[1144px] gap-6 w-full font-medium text-black text-base tracking-wide">
         {faqs.map((faq, index) => (
           <div key={index}>
             <button
@@ -30,7 +30,7 @@ const FaqAccordion = ({ faqs }: { faqs: FaqItem[] }) => {
                 currentFaq === index && 'bg-red-700/90 text-white'
               }`}
             >
-              <span className="group-hover:text-white">{`${index + 1}. ${faq.question}`}</span>
+              <span className="group-hover:text-white text-start">{`${index + 1}. ${faq.question}`}</span>
              {currentFaq === index ? <ChevronUpIcon className="w-5 h-5" /> : <ChevronDownIcon className="w-5 h-5" />}
             </button>
             {currentFaq === index && (
