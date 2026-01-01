@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import GetBtn from "../buttons/GetBtn";
 
 const Carousel = ({ items }: CarouselProps) => {
   const [openDescription, setOpenDescription] = useState<Number>()
@@ -69,6 +70,14 @@ const Carousel = ({ items }: CarouselProps) => {
               <div className="absolute w-full h-full px-2 text-white flex flex-col items-center justify-center gap-6 bg-black/70">
               <h2 className="text-xl md:text-3xl text-center font-semibold w-fit border-b-2 border-red-600  mx-auto ">{slide.title}</h2>
               <p className=" mx-auto text-center">{slide?.description}</p>
+              <div className="flex items-center justify-center gap-3">
+                <span className="text-orange-400">$69</span>
+              <GetBtn
+                content="Order Now"
+                link="/our-plans"
+                className="bg-fit-red text-white font-bold px-6 py-3 rounded-full shadow-lg transition-transform duration-300 hover:scale-110 hover:shadow-2xl"
+              />
+              </div>
               </div>}
               </div>
               {/* {openDescription === slideIndex &&
