@@ -1,5 +1,6 @@
 "use client";
 
+import ContactUsCard from "@/components/main/ContactUsCard";
 import FaqAccordion from "@/components/main/FaqAccordion";
 import FaqCard from "@/components/main/FaqCard";
 import { deliveryFaqs, faqs, mealsAndNutritionFaqs, orderingAndPlansFaqs, paymentsAndSupportFaqs } from "@/constants/data";
@@ -74,25 +75,9 @@ const Page = () => {
           Contact Us
         </button>
       </div>
-
       {/* bg-img section */}
-      <div className="w-full relative min-h-[600px] bg-[url('/images/food-main.avif')] bg-cover bg-center flex justify-center mt-40">
-        <div className="flex flex-col items-center mx-12 px-12 absolute top-[-80px] bg-white gap-6 py-10 border-gray-200 rounded-sm group hover:bg-fit-red hover:text-white hover:rounded-xl duration-500">
-          <h1 className="text-[#000] group-hover:text-white font-Arial Black text-4xl font-bold  text-center pt-8">
-            Fit Mafia: Fresh Healthy Meals, Delivered Daily.
-          </h1>
-          <span className="text-[#4b4d4c] group-hover:text-white text-center">
-            Healthy food shouldn’t be boring or time-consuming. That’s why we created Fit Mafia — to make eating clean easy, exciting, and effortless.
-          </span>
-          <button
-            // type="submit"
-            onClick={()=> router.push('/contact-us')}
-            className="px-6 py-3 text-white border rounded-lg bg-fit-red group-hover:bg-white group-hover:text-fit-red"
-          >
-             Contact Us
-          </button>
-        </div>
-      </div>
+      <ContactUsCard title="Fit Mafia: Fresh Healthy Meals, Delivered Daily." description="Healthy food shouldn’t be boring or time consuming. That’s why we created Fit Mafia to make eating clean easy, exciting, and effortless." buttonText="Contact Us" />
+  
     </div>
   );
 };
