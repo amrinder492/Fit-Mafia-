@@ -324,43 +324,53 @@ export const featuresData = [
         {
         //   url: "/services/android-app-development",
           image: "/plan-images/alpha/1.jpg",
-          title: "PB Sandwich",
+          title: "Peanut Butter Sandwich",
+          description: "Peanut butter sandwich made with whole grain bread and creamy PB, simple, filling, and packed with healthy fats and protein to keep you energized."
         },
         {
           image: "/plan-images/alpha/2.jpg",
           title: "Chickpea Salad",
+          description: "Protein packed chickpeas tossed with fresh veggies, herbs, and a zesty dressing clean, filling, and built to fuel your goals without empty calories."
         },
         {
           image: "/plan-images/alpha/3.jpg",
           title: "Oats/Sweet Potato",
+          description: "Power packed and clean: slow digesting oats paired with naturally sweet roasted sweet potatoes for steady energy, better workouts, and zero junk. Built for performance, not cravings."
         },
         {
           image: "/plan-images/alpha/4.jpg",
           title: "Cheese Salad",
+          description: "Cheese Salad — a fresh, crunchy mix of vegetables topped with protein rich cheese, lightly dressed for bold flavor without heavy calories."
         },
         {
           image: "/plan-images/alpha/5.jpg",
           title: "Fruits Salad",
+          description: "Freshly chopped seasonal fruits tossed together for a light, refreshing boost naturally sweet, fiber rich, and perfect for clean energy without the guilt."
         },
         {
           image: "/plan-images/avengers/1.jpg",
           title: "PB Sandwich, Chicken",
+          description: "Grilled chicken, creamy peanut butter sauce, and crisp veggies on toasted bread. High protein, bold flavor, zero nonsense."
         },
         {
           image: "/plan-images/avengers/2.jpg",
           title: "Sandwich",
+          description: "A high protein, clean ingredient sandwich built for performance lean fillings, whole grain bread, and bold flavor without the junk. Fuel, not filler."
         },
         {
           image: "/plan-images/avengers/3.jpg",
           title: "Sandwich",
+           description: "A high protein, clean ingredient sandwich built for performance lean fillings, whole grain bread, and bold flavor without the junk. Fuel, not filler."
         },
         {
           image: "/plan-images/avengers/4.jpg",
           title: "Sandwich",
+           description: "A high protein, clean ingredient sandwich built for performance lean fillings, whole grain bread, and bold flavor without the junk. Fuel, not filler."
         },
         {
           image: "/plan-images/avengers/5.jpg",
           title: "Sandwich",
+           description: "A high protein, clean ingredient sandwich built for performance lean fillings, whole grain bread, and bold flavor without the junk. Fuel, not filler."
         },
         
         
