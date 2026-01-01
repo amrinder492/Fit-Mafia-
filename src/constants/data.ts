@@ -390,3 +390,97 @@ export const testimonials = [
       stars: 5,
     },
   ];
+
+ export const menuData = [
+    {
+      title: "Chef's Choice",
+      description: "Widest variety of clean and chef created meals",
+      imageUrl: "/plan-images/avengers/1.jpg",
+    },
+    {
+      title: "Protein Plus",
+      description: "30 grams of protein or more per serving",
+      imageUrl: "/plan-images/avengers/2.jpg",
+    },
+    {
+      title: "Calorie Smart",
+      description: "Meals containing ~550 calories or less",
+      imageUrl: "/plan-images/avengers/3.jpg",
+    },
+    {
+      title: "GLP-1 Balance",
+      description: "Protein-forward, calorie-friendly meals",
+      imageUrl: "/plan-images/avengers/4.jpg",
+    },
+    {
+      title: "GLP-1 Balance",
+      description: "Protein-forward, calorie-friendly meals",
+      imageUrl: "/plan-images/avengers/5.jpg",
+    },
+  ];
+  
+ export const portion = [
+    {
+      label: "regular", img: '/icons/main/regular.png'
+    },
+    {
+      label: "large", img: '/icons/main/large.png'
+    },
+  ];
+  
+ export const preferences = [
+    {
+      label: "Alpha",
+      price: 350,
+    },
+    {
+      label: "Avengers",
+      price: 320,
+    },
+    {
+      label: "Gladiator",
+      price: 320,
+    },
+    {
+      label: "Hustler",
+      price: 250,
+    },
+    {
+      label: "Spartans",
+      price: 375,
+    },
+    {
+      label: "Warrior",
+      price: 300,
+    },
+  ];
+  
+ export const goals = [
+    { title: 'mussle', img: '/icons/main/mussle.png'},
+    { title: 'fat', img: '/icons/main/fat.png'},
+    { title: 'active', img: '/icons/main/active.png'},
+    { title: 'health', img: '/icons/main/health.png'},
+  ];
+  
+ export const faqData = [
+    {
+      question: "What are the benefits of Fit Mafia meals?",
+      answer:
+        "Our meals are healthy, chef-curated, and approved by nutritionists. Each box is designed to save you time, support your health goals, and keep you energized — perfect for busy professionals and fitness-conscious individuals.",
+    },
+    {
+      question: "How does delivery work?",
+      answer:
+        "Your meals are delivered fresh to your door daily. You’ll receive a delivery schedule after you sign up, and you can easily change the address from your account.",
+    },
+    {
+      question: "What if I want to skip a week or cancel?",
+      answer:
+        "No problem — you’re in control. You can pause, skip, or cancel your plan anytime through your dashboard. No long-term commitments.",
+    },
+    {
+      question: "Are your meals good for weight loss or muscle gain?",
+      answer:
+        "Absolutely. Our meals are portioned with the right macros to support fat loss, lean muscle building, or just clean eating. You’ll always know what you're eating — no guesswork.",
+    },
+  ];
