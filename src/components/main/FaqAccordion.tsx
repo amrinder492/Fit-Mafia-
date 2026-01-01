@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline'; // You can change this as needed
+import { ChevronUpIcon } from 'lucide-react';
 
 type FaqItem = {
   question: string;
@@ -30,7 +31,7 @@ const FaqAccordion = ({ faqs }: { faqs: FaqItem[] }) => {
               }`}
             >
               <span className="group-hover:text-white">{`${index + 1}. ${faq.question}`}</span>
-              <ChevronDownIcon className="w-5 h-5" />
+             {currentFaq === index ? <ChevronUpIcon className="w-5 h-5" /> : <ChevronDownIcon className="w-5 h-5" />}
             </button>
             {currentFaq === index && (
               <div className="w-full h-fit mt-3 p-3 border-red-700 border rounded-lg text-sm">
