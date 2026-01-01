@@ -15,7 +15,7 @@ const LOAD_MORE_STEP = 3
 const ReadyMeals = () => {
   const [showMealsCount, setShowMealsCount] = useState(INITIAL_MEALS)
   const [totalMeals, setTotalMeals] = useState<Meal[]>([])
-
+// window.innerWidth 
   useEffect(() => {
     const meals = addOnesData.slice(0, showMealsCount)
     setTotalMeals(meals)

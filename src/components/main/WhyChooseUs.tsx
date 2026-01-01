@@ -8,21 +8,18 @@ const WhyChooseUs = () => {
       {/* why choose */}
       <section className="bg-fit-red text-white h-full pt-6 lg:pt-0">
           <div className="flex flex-col lg:flex-row justify-between gap-5 px-10 md:px-16">
-            <div className="md:w-1/3  max-md:pt-5 w-full flex justify-center items-center">
-              <div className="relative rounded-lg overflow-hidden h-[200px] sm:h-[250px] md:h- [300px] w-full my-auto">
-                <Image
-                  src={"/plan-images/single/2.jpg"}
-                  alt="image"
-                //   className="img1 w-[460px] object-contain"
-                  data-aos="zoom-in"
-                  data-aos-delay="300"
-                  loading="lazy"
-                  fill 
-                //   height={300}
-                //   width={300}
-                  style={{objectFit: 'cover'}}
-                />
-              </div>
+            <div className="md:w-1/3 h-56 lg:h-auto relative md:pt-5 w-full flex justify-center items-center">
+            <Image
+  src="/plan-images/single/2.jpg"
+  alt="image"
+  data-aos="zoom-in"
+  data-aos-delay="300"
+  loading="lazy"
+  fill
+  style={{ objectFit: 'cover' }}
+  sizes="100vw"
+/>
+
             </div>
             <div className="md:w-2/3">
               <div

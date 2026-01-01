@@ -49,7 +49,7 @@ const page = () => {
               alt="foodImage"
               width={342}
               height={342}
-              className="rounded-xl"
+              className="rounded-xl w-full h-auto"
             />
           </div>
           <div className="flex-[0.5] flex flex-col gap-3 px-6 md:px-12">
@@ -133,7 +133,7 @@ const page = () => {
         </div>
       </div>
 
-      <MealsCardsSection/>
+      <MealsCardsSection />
 
       {/* check out our meals */}
       <div className="flex flex-col min-h-[520px] w-full h-auto gap-6 items-center px-6 md:px-12">
@@ -151,7 +151,7 @@ const page = () => {
         <Carousel items={howItWorksMealsData} />
       </div>
 
-      <OrderNow/>
+      <OrderNow />
       {/* add ones */}
       <div className="flex flex-col min-h-[580px] h-auto gap-6 items-center bg-[#f1f1ea] pt-6 pb-12 px-12">
         <div className="flex flex-col items-center w-full">

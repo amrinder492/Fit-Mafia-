@@ -20,6 +20,7 @@ const Features = () => {
                     fill
                     style={{ objectFit: "cover" }}
                     className="rounded-t-lg"
+                    sizes="100vw"
                   />
                 </div>
                 <div className="p-5">

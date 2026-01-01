@@ -27,16 +27,17 @@ export default function Testimonials() {
       <div className="flex max-w-[1600px] mx-auto px-4 items-center">
         {/* Left image */}
         <div className="hidden sm:block w-1/3">
-  <Image
-    src="/plan-images/spartans/6.jpg"
-    alt="Food"
-    width={400}
-    height={280}
-    className="mx-auto rounded-xl object-contain"
-    sizes="(min-width: 640px) 33vw, 0px"
-    priority={true}
-  />
-</div>
+          <div className="relative w-[400px] h-[280px] mx-auto">
+            <Image
+              src="/plan-images/spartans/6.jpg"
+              alt="Food"
+              fill
+              className="rounded-xl object-contain"
+              sizes="(min-width: 640px) 33vw, 100vw"
+              priority
+            />
+          </div>
+        </div>
 
         {/* Slider */}
         <div className="sm:w-2/3 w-full">

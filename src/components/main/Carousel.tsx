@@ -61,9 +61,9 @@ const Carousel = ({ items }: CarouselProps) => {
               <div className="relative h-[400px] w-full max-w-[320px] rounded-lg overflow-hidden">
                 <Image
                   src={slide?.imageUrl ?? slide?.image ?? ''}
-                  alt={"img"}
-                  className=""
+                  alt={"img"}                
                   fill
+                  sizes="(min-width: 640px) 320px, 100vw"
                   style={{ objectFit: "cover" }}
                 />
               {openDescription === slideIndex &&

@@ -22,6 +22,7 @@ const MealCard = ({image, title, desc, veg = false, calSmart = false, tags, cove
                         src={image}
                         alt='meals'
                         fill
+                         sizes="100vw"
                         style={{ objectFit: cover ? 'cover' :'contain', 
                             transform: !cover ? "scale(1.2)" : 'scale(1)',
                          }}
