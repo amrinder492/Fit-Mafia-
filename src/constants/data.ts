@@ -484,3 +484,93 @@ export const testimonials = [
         "Absolutely. Our meals are portioned with the right macros to support fat loss, lean muscle building, or just clean eating. You’ll always know what you're eating — no guesswork.",
     },
   ];
+
+ export const howItWorksMealsData = [
+    {
+      title: "Indian Thali",
+      description:
+        "A wholesome platter featuring a variety of traditional Indian dishes, offering a balanced and flavorful meal.",
+      imageUrl: "/plan-images/warrior/2.1.jpg",
+    },
+    {
+      title: "Chicken Skewers",
+      description:
+        "Succulent pieces of chicken marinated in spices and grilled to perfection, served on skewers.",
+      imageUrl: "/plan-images/warrior/3.1.jpg",
+    },
+    {
+      title: "Light Indian Bites",
+      description:
+        "Balanced and wholesome Indian meals under 550 calories — guilt-free yet satisfying.",
+      imageUrl: "/plan-images/warrior/4.1.jpg",
+    },
+    {
+      title: "Veggie Delights",
+      description:
+        "Pure veg Indian meals featuring seasonal veggies, lentils, and rich flavors.",
+      imageUrl: "/plan-images/warrior/5.1.jpg",
+    },
+    {
+      title: "Indian Thali",
+      description:
+        "A wholesome platter featuring a variety of traditional Indian dishes, offering a balanced and flavorful meal.",
+      imageUrl: "/plan-images/avengers/1.jpg",
+    },
+    {
+      title: "Light Indian Bites",
+      description:
+        "Balanced and wholesome Indian meals under 550 calories — guilt-free yet satisfying.",
+      imageUrl: "/plan-images/avengers/2.jpg",
+    },
+    {
+      title: "Indian Bites",
+      description:
+        "Balanced and wholesome Indian meals under 550 calories — guilt-free yet satisfying.",
+      imageUrl: "/plan-images/avengers/3.jpg",
+    },
+  ];
+
+ export const howItWorksAddonItems = [
+    {
+      title: "Aam Panna",
+      description:
+        "A refreshing summer drink made from raw mangoes and spices to cool you down.",
+      imageUrl: "/plan-images/single/1.jpg",
+    },
+    {
+      title: "Masala Chaas",
+      description:
+        "Traditional buttermilk spiced with cumin, ginger, and coriander for digestion.",
+      imageUrl: "/plan-images/single/2.jpg",
+    },
+    {
+      title: "Thandai",
+      description:
+        "A festive North Indian drink made with milk, saffron, almonds, and spices.",
+      imageUrl: "/plan-images/single/3.jpg",
+    },
+    {
+      title: "Kesar Badam Milk",
+      description:
+        "Sweet, creamy milk infused with saffron and almonds, served warm or cold.",
+      imageUrl: "/plan-images/single/4.jpg",
+    },
+    {
+      title: "Aam Panna",
+      description:
+        "A refreshing summer drink made from raw mangoes and spices to cool you down.",
+      imageUrl: "/plan-images/single/5.jpg",
+    },
+    {
+      title: "Thandai",
+      description:
+      "A festive North Indian drink made with milk, saffron, almonds, and spices.",
+      imageUrl: "/plan-images/single/6.jpg",
+    },
+    {
+      title: "Aam Panna",
+      description:
+        "A refreshing summer drink made from raw mangoes and spices to cool you down.",
+      imageUrl: "/plan-images/single/7.jpg",
+    },
+  ];
