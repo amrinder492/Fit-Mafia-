@@ -9,7 +9,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
+    extend: {      
+      screens: {
+        'lg-tall': {
+          raw: '(min-width: 1024px) and (min-height: 900px)',
+        },
+      },
       colors: {
         'fit-red': '#E50914',
         'fit-grey': '#1C1C1C',

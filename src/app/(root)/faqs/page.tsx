@@ -30,7 +30,7 @@ const Page = () => {
         />
       </div> */}
       {/* questions */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-5 w-full h-full px-4 lg:px-0 xl:px-12 py-2 ">
+      <div className="grid grid-cols-1 lg-tall:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-5 w-full h-full px-4 lg-tall:px-4 lg:px-0 xl:px-12 py-2 ">
         {faqs.map((data) => {
           const isActive = selectedFaqGroup === data.value;
           return (
