@@ -3,14 +3,13 @@ import React from 'react'
 
 const AppCTASection = () => {
   return (
-<div className="lg:w-1/2 w-full lg:flex-col flex justify-center gap-3 h-full ">
+<div className="lg:w-1/2 lg-tall:w-full w-full lg-tall:flex-row lg-tall:items-center lg:items-start md:flex-col flex justify-center gap-3 h-full ">
         {/* image */}
-        <div className="flex-[0.6] hidden lg:block w-full border relative border-black">
+        <div className="lg-tall:h-[400px] flex-[0.6] hidden md:block w-full border relative border-black">
             <Image
             src={"/temp/temp.webp"}
             fill
-            alt='download'
-            
+            alt='download'            
              />
         </div>
         {/* content */}

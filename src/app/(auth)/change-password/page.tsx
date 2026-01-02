@@ -30,10 +30,11 @@ const Page = () => {
   }
   return (
     <div className="h-[calc(100vh-56px)] overflow-hidden flex items-center justify-center bg-[#f1f1ea] px-6 lg:px-12">
-      <div className="mx-auto w-full h-full max-w-[1200px] flex items-center gap-10 lg:gap-0 justify-center lg:justify-between px-3 py-6 flex-col lg:flex-row">
+      <div className="mx-auto w-full h-full max-w-[1200px] flex items-center gap-10  lg:gap-0 justify-center lg-tall:justify-center lg:justify-between px-3 py-6 flex-col lg-tall:flex-col lg:flex-row">
+        {/* <div className="w-full bg-black h-1/2"> */}
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="p-6 bg-white rounded-lg shadow-lg h-auto lg:min-h-[250px] max-w-[424px] w-full gap-3 flex-[0.7] flex flex-col items-center"
+          className="p-6 bg-white rounded-lg shadow-lg h-auto lg-tall:h-[400px] lg:h-[250px] lg-tall:w-full lg:w-[424px] w-full gap-3 flex-[0.7] flex flex-col items-center"
         >
           <h2 className="text-2xl font-bold mb-4 text-black">
             Change Your Password
@@ -75,6 +76,7 @@ const Page = () => {
             Change my password
           </button>
         </form>
+        {/* </div> */}
         {/* image section */}
       <AppCTASection />
       </div>
