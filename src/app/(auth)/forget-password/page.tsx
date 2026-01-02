@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import Image from "next/image";
+import AppCTASection from "@/components/main/AppCTASection";
 
 type Inputs = {
   email: string;
@@ -28,11 +29,11 @@ const Page = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#f1f1ea] px-12 ">
-      <div className="mx-auto w-full min-h-[643px] max-w-[1100px] flex items-center lg:items-start gap-6 justify-center px-3 py-6 flex-col lg:flex-row">
+    <div className="h-[calc(100vh-56px)] overflow-hidden flex items-center justify-center bg-[#f1f1ea] px-12 ">
+      <div className="mx-auto w-full h-full max-w-[1200px] flex items-center  gap-6 lg:gap-0 lg:justify-between justify-center px-3 py-6 flex-col lg:flex-row">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="p-6 bg-white rounded-lg shadow-lg h-auto min-h-[250px] max-w-[424px] w-full gap-3 flex-[0.5] flex flex-col items-center"
+          className="p-6 bg-white rounded-lg shadow-lg h-auto min-h-[250px] max-w-[524px] w-full gap-3 flex-[0.7] flex flex-col items-center"
         >
           <h2 className="text-2xl font-bold mb-4 text-black">
             Forgot your password?
@@ -67,43 +68,7 @@ const Page = () => {
           </a>
         </form>
         {/* image section */}
-        <div className="flex-[0.5]  flex gap-3 h-auto min-h-[360px] w-full">
-          {/* image */}
-          <div className="flex-[0.3] w-full border border-black"></div>
-          {/* content */}
-          <div className="flex-[0.6] max-w-[495px] w-full flex flex-col gap-3 py-3">
-            <span className="font-normal text-[18px] leading-[24px] text-[#13400f] font-Helvetica">
-              The Factor App
-            </span>
-            <h1 className="font-semibold text-[40px] text-[#333] w-full">
-              Meals at Your Fingertips
-            </h1>
-            <span className="font-normal text-[16px] leading-[24px] text-black font-Helvetica">
-              With our app you can view menus, select meals, and see your
-              scheduled deliveries.
-            </span>
-            <div className="w-full flex sm:flex-row flex-col gap-3">
-            <div className="w-30 h-10 relative">
-              <Image
-                src="/temp/appstore-badge-en.png"
-                alt="appstore"
-                fill
-                className="object-contain"
-                sizes="120px"
-              />
-              </div>
-             <div className="w-30 h-10 relative">
-              <Image
-                src="/temp/playstore-badge-en.png"
-                alt="appstore"
-                fill
-                className="object-contain"
-                sizes="120px"
-              />
-              </div>
-            </div>
-          </div>
-        </div>
+       <AppCTASection />
       </div>
     </div>
   );
