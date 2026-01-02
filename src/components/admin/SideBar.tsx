@@ -1,9 +1,16 @@
 "use client";
 
-import { House, IdCard, LayoutDashboard, ListOrdered, Menu, MenuSquare, User, X } from "lucide-react";
+import { sidebarLinks } from "@/constants/data";
+import { House, IdCard, LayoutDashboard, ListOrdered, MenuSquare, User, X } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
-
+const iconMap = {
+  LayoutDashboard,
+  ListOrdered,
+  IdCard,
+  MenuSquare,
+  User,
+};
 const SideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,38 +38,17 @@ const SideBar = () => {
               </button>
         <div className="h-full mt-4 py-4 w-full overflow-y-auto">
           <ul className="flex flex-col gap-6 w-full text-white font-extralight">
-            
-            <li className="cursor-pointer flex gap-2">
-                <LayoutDashboard strokeWidth={1.2}/>
-                <Link href={'/dashboard'} onClick={()=> setIsOpen(!isOpen)}>
-                Dashboard
+            {sidebarLinks?.map((menu) => {
+              const Icon = iconMap[menu.icon as keyof typeof iconMap];
+              return (
+            <li key={menu?.title} className="cursor-pointer flex gap-2">
+                <Icon strokeWidth={1.2}/>
+                <Link href={menu?.link} onClick={()=> setIsOpen(!isOpen)}>
+                {menu?.title}
                 </Link>
             </li>
-            {/* <div className="w-full bg-white h-[0.5px]"></div> */}
-            <li className="cursor-pointer flex items-center gap-2">
-                <ListOrdered strokeWidth={1.2}/>
-                <Link href={'/order-mgt'} onClick={()=> setIsOpen(!isOpen)}>
-                Order Management
-                </Link>
-            </li>
-            <li className="cursor-pointer flex items-center gap-2">
-                <IdCard strokeWidth={1.2}/>
-                <Link href={'/subscription-mgt'} onClick={()=> setIsOpen(!isOpen)}>
-                Subscription Management
-                </Link>
-            </li>
-            <li className="cursor-pointer flex items-center gap-2">
-                <MenuSquare strokeWidth={1.2}/>
-                <Link href={'/menu-mgt'} onClick={()=> setIsOpen(!isOpen)}>
-                Menu Management
-                </Link>
-            </li>
-            <li className="cursor-pointer flex items-center gap-2">
-                <User strokeWidth={1.2}/>
-                <Link href={'/user-mgt'} onClick={()=> setIsOpen(!isOpen)}>
-                User Management
-                </Link>
-            </li>
+            )})}
+          
 
           </ul>
         </div>
