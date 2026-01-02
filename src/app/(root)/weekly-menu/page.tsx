@@ -3,7 +3,7 @@ import Carousel from "@/components/main/Carousel";
 import MealCard from "@/components/main/MealCard";
 import ReadyMeals from "@/components/main/ReadyMeals";
 import WeekSelector from "@/components/main/WeekSlector";
-import { addOnesData, alphaData, avengersData, hustlerData, mealsData, spartansData, warriorData } from "@/constants/data";
+import { alphaData, avengersData, hustlerData, mealsData, spartansData, warriorData } from "@/constants/data";
 // import Image from 'next/image'
 import React from "react";
 
