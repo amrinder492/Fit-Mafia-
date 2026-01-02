@@ -31,8 +31,8 @@ const MealCard = ({image, title, desc, veg = false, calSmart = false, tags, cove
                 </div>
 
                 <div className="w-full p-3 pt-0">
-                    {/* <h3 className='font-bold text-lg '>{title}</h3>
-                    <h4 className='text-base '>{desc}</h4> */}
+                    <h3 className='font-bold text-lg '>{title}</h3>
+                    <h4 className='text-base '>{desc}</h4>
                 </div>
 
                 <div className="w-full p-3 pt-0 flex gap-2 items-center text-sm text-white">
