@@ -26,7 +26,7 @@ const SideBar = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:top-0 left-0 z-40 h-[calc(100vh-56px)] px-5 w-3/4 bg-[#242c40] transition-transform transform ${
+        className={`fixed md:top-0 left-0 z-40 h-[calc(100vh-56px)] px-5 w-3/4 lg-tall:w-full bg-[#242c40] transition-transform transform ${
           isOpen ? "translate-x-0" : "-translate-x-full mr-1"
         } md:translate-x-0 md:static md:inset-auto`}
       >
@@ -36,13 +36,13 @@ const SideBar = () => {
               >
                 <X />
               </button>
-        <div className="h-full mt-4 py-4 w-full overflow-y-auto">
+        <div className="h-full py-8 w-full overflow-y-auto">
           <ul className="flex flex-col gap-6 w-full text-white font-extralight">
             {sidebarLinks?.map((menu) => {
               const Icon = iconMap[menu.icon as keyof typeof iconMap];
               return (
             <li key={menu?.title} className="cursor-pointer flex gap-2">
-                <Icon strokeWidth={1.2}/>
+                <Icon strokeWidth={1.2} className=""/>
                 <Link href={menu?.link} onClick={()=> setIsOpen(!isOpen)}>
                 {menu?.title}
                 </Link>
