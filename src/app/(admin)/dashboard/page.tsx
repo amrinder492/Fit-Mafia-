@@ -20,7 +20,7 @@ const StatCard = ({Icon, title, value}: { Icon: React.ElementType, title: string
     <Icon className="text-blue-500 w-6 h-6" />
     <div>
       <div className="text-sm text-gray-500">{title}</div>
-      <div className="text-xl font-semibold text-gray-800">{value}</div>
+      <div className="text-xl font-semibold text-center text-gray-800">{value}</div>
     </div>
   </div>
 );
