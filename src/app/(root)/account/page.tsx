@@ -80,8 +80,8 @@ export default function AccountPage() {
   };
 
   return (
-    <div className="w-full h-full py-3 bg-[#d9dfc685] ">
-        <div className="max-w-2xl mx-auto p-6 my-10 bg-white shadow rounded-md">
+    <div className="w-full h-full py-3 bg-[#d9dfc685] px-4 lg:px-0">
+        <div className="lg:max-w-2xl mx-auto p-6 my-10 bg-white shadow rounded-md">
         <h1 className="text-2xl font-bold mb-4">My Account</h1>
 
         {/* Basic Info */}

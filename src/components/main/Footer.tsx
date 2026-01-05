@@ -1,5 +1,6 @@
 "use client"
 
+import { linkAccount, linkShop } from "@/constants/data";
 // import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 // import { SubmitHandler, useForm } from "react-hook-form";
@@ -7,22 +8,6 @@ import Link from "next/link";
 // import axios from "axios";
 // import { toast } from "react-toastify";
 
-
-
-  const linkAccount = [
-    { url: "/weekly-menu", text: "Weekly menu" },
-    { url: "/our-plans", text: "Our Plans" },
-    { url: "/how-it-works", text: "How It Works" },
-    { url: "/privacy-policy", text: "Terms & Conditions" },
-    { url: "/privacy-policy", text: "Privacy Policy" },
-    { url: "/faqs", text: "FAQs" },
-  ];
-
-  const linkShop = [
-    { url: "/our-plans", text: "Search" },
-    { url: "/our-plans", text: "Meal Plans" },
-    { url: "/our-plans", text: "All Tiffins" },
-  ];
 
   // interface FormValues {
   // phoneNumber: string;
@@ -54,21 +39,21 @@ const Footer = () => {
 
   return (
     <div className="w-full flex flex-col bg-white px-4 md:px-12 pt-12 items-center">
-      <div className=" w-full flex flex-col lg:flex-row max-lg:items-center justify-center gap-4">
+      <div className=" w-full flex flex-col lg:flex-row border-t border-red-500 pt-12 max-lg:items-center justify-center gap-4">
         {/* links section */}
-        <div className="max-w-[805px] pb-5 w-full h-full flex flex-col gap-3 justify-center lg:justify-start">
+        <div className="max-w-6xl pb-5 w-full h-full flex flex-col gap-3 justify-center lg:justify-start">
           {/* Factor */}
-          <div className="max-w- [200px] w-full h-full flex flex-col gap-2 ">
-            <span className="font-bold text-[16px] leading-[24px] text-black">
+          <div className="m w-full h-full flex flex-col gap-2 ">
+            <span className="font-bold text-[16px] lg:text-2xl leading-[24px] text-black">
               Fit Mafia
             </span>
             <div className="flex flex-wrap gap-3 sm:gap-8 w-full">
-              {linkAccount.map((e, i) => {
+              {linkAccount?.map((e, i) => {
                 return (
                   <Link
                     key={i}
                     href={e.url}
-                    className="font-normal text-[14px] leading-[20px] text-black hover:text-fit-red min-[450px]:whitespace-nowrap min-[450px]:text-ellipsis"
+                    className="font-normal text-[14px] lg:text-base leading-[20px] text-black hover:text-fit-red min-[450px]:whitespace-nowrap min-[450px]:text-ellipsis"
                   >
                     {e.text}
                   </Link>
@@ -79,16 +64,16 @@ const Footer = () => {
 
           {/* Shop */}
           <div className="max-w-[200px] w-full h-full flex flex-col gap-2">
-            <span className="font-bold text-[16px] leading-[24px] text-black">
+            <span className="font-bold text-[16px] lg:text-2xl leading-[24px] text-black">
               Shop
             </span>
             <div className="flex  gap-3">
-              {linkShop.map((e, i) => {
+              {linkShop?.map((e, i) => {
                 return (
                   <Link
                     key={i}
                     href={e.url}
-                    className="inline-block font-normal w-full text-[14px] leading-[20px] text-black hover:text-fit-red whitespace-nowrap"
+                    className="inline-block font-normal w-full text-[14px] lg:text-base leading-[20px] text-black hover:text-fit-red whitespace-nowrap"
                   >
                     {e.text}
                   </Link>

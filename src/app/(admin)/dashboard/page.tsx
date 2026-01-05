@@ -17,10 +17,12 @@ const data = {
 
 const StatCard = ({Icon, title, value}: { Icon: React.ElementType, title: string, value: number | string }) => (
   <div className="flex flex-col justify-center h-44 items-center gap-4 p-4 bg-white rounded-xl shadow border">
-    <Icon className="text-blue-500 w-6 h-6" />
+    <div className="p-2 bg-blue-500 rounded-full">
+    <Icon className="text-white w-6 h-6" />
+    </div>
     <div>
       <div className="text-sm text-gray-500">{title}</div>
-      <div className="text-xl font-semibold text-gray-800">{value}</div>
+      <div className="text-xl font-semibold text-center text-gray-800">{value}</div>
     </div>
   </div>
 );

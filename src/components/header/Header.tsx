@@ -1,13 +1,7 @@
 "use client";
 
 import axios from "axios";
-import {
-  AlignJustify,
-  // ChevronDown,
-  // Search,
-  // ShoppingCart,
-  // User,
-} from "lucide-react";
+import { AlignJustify, X } from "lucide-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,11 +20,16 @@ const Header = () => {
         <div className="w-full flex justify-between items-center">
           {/* // first part of the header */}
           <div className="flex items-center gap-4 w-full ">
-            <Link href={'/'} className="relative h-10 w-16 rounded-lg overflow-hidden">
+            <Link
+              href={"/"}
+              className="relative h-10 w-16 rounded-lg overflow-hidden"
+            >
               <Image
                 src={"/icons/header/logo.png"}
                 alt="logo"
                 fill
+                priority
+                sizes="64px"
                 style={{ objectFit: "cover" }}
               />
             </Link>
@@ -67,46 +66,59 @@ const Header = () => {
           <div className="flex justify-end items-center gap-4 w-full  ">
             <div className="hover:text-red-700 duration-300">
               {/* {status && <User />} */}
-              {status && <ProfilePopover/>}
+              {status && <ProfilePopover />}
             </div>
-            {!status && (
-              <Link
-                href={"/sign-in"}
-                className="px-3 py-1 border border-fit-red rounded-md "
-              >
-                Login
-              </Link>
-            ) 
-            // : (
-            //   <button
-            //     onClick={() => signOut()}
-            //     className="px-3 py-1 border border-fit-red rounded-md "
-            //   >
-            //     Log out
-            //   </button>)
-              }
+            {
+              !status && (
+                <Link
+                  href={"/sign-in"}
+                  className="px-3 py-1 border border-fit-red rounded-md "
+                >
+                  Login
+                </Link>
+              )
+              // : (
+              //   <button
+              //     onClick={() => signOut()}
+              //     className="px-3 py-1 border border-fit-red rounded-md "
+              //   >
+              //     Log out
+              //   </button>)
+            }
           </div>
         </div>
       </div>
 
       {/* // Mobile Header */}
-      <div className="w-full hidden max-md:block ">
+      <div className="w-full block md:hidden ">
         <div className="w-full flex justify-between items-center gap-4 ">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <AlignJustify />
+            {isOpen ? <X className="text-red-700" /> : <AlignJustify />}
           </button>
-          <Link href={'/'} className="relative h-10 w-16 rounded-lg overflow-hidden">
+          <Link
+            href="/"
+            className="relative h-10 w-16 rounded-lg overflow-hidden"
+          >
             <Image
-              src={"/icons/header/logo.png"}
+              src="/icons/header/logo.png"
               alt="logo"
               fill
+              priority
+              sizes="64px"
               style={{ objectFit: "cover" }}
             />
           </Link>
-          {status ? <ProfilePopover/> 
-          : <Link href={"/sign-in"} className="px-3 py-1 border border-fit-red rounded-md " >
-            Login
-          </Link>}
+
+          {status ? (
+            <ProfilePopover />
+          ) : (
+            <Link
+              href={"/sign-in"}
+              className="px-3 py-1 border border-fit-red rounded-md "
+            >
+              Login
+            </Link>
+          )}
         </div>
 
         {isOpen && (

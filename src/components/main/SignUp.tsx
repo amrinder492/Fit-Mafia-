@@ -72,8 +72,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="min-h-full flex items-center justify-center bg-[#f1f1ea]">
-      <div className="max-w-[1100px] w-full min-h-[643px] flex items-center lg:items-start gap-6 justify-center px-3 py-6 flex-col lg:flex-row">
+    <div className="h-[calc(100vh-56px)] flex items-start justify-center bg-[#f1f1ea]">
+      <div className="max-w-[1100px] w-full h-full flex items-center gap-6 justify-center px-3 py-6 flex-col lg:flex-row">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="p-6 bg-white rounded-lg shadow-lg h-auto min-h-[432px] max-w-[424px] w-full gap-3 flex-[0.5] flex flex-col items-center"

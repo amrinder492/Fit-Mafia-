@@ -3,100 +3,10 @@ import Image from "next/image";
 import Carousel from "@/components/main/Carousel";
 import Link from "next/link";
 import MealsCardsSection from "@/components/main/MealsCardsSection";
-// import LearnMoreFaqs from "@/components/main/LearnMoreFaqs";
 import OrderNow from "@/components/main/OrderNow";
+import { howItWorksAddonItems, howItWorksMealsData } from "@/constants/data";
 
 const page = () => {
-  const mealsData = [
-    {
-      title: "Indian Thali",
-      description:
-        "A wholesome platter featuring a variety of traditional Indian dishes, offering a balanced and flavorful meal.",
-      imageUrl: "/plan-images/warrior/2.1.jpg",
-    },
-    {
-      title: "Chicken Skewers",
-      description:
-        "Succulent pieces of chicken marinated in spices and grilled to perfection, served on skewers.",
-      imageUrl: "/plan-images/warrior/3.1.jpg",
-    },
-    {
-      title: "Light Indian Bites",
-      description:
-        "Balanced and wholesome Indian meals under 550 calories — guilt-free yet satisfying.",
-      imageUrl: "/plan-images/warrior/4.1.jpg",
-    },
-    {
-      title: "Veggie Delights",
-      description:
-        "Pure veg Indian meals featuring seasonal veggies, lentils, and rich flavors.",
-      imageUrl: "/plan-images/warrior/5.1.jpg",
-    },
-    {
-      title: "Indian Thali",
-      description:
-        "A wholesome platter featuring a variety of traditional Indian dishes, offering a balanced and flavorful meal.",
-      imageUrl: "/plan-images/avengers/1.jpg",
-    },
-    {
-      title: "Light Indian Bites",
-      description:
-        "Balanced and wholesome Indian meals under 550 calories — guilt-free yet satisfying.",
-      imageUrl: "/plan-images/avengers/2.jpg",
-    },
-    {
-      title: "Indian Bites",
-      description:
-        "Balanced and wholesome Indian meals under 550 calories — guilt-free yet satisfying.",
-      imageUrl: "/plan-images/avengers/3.jpg",
-    },
-  ];
-
-  const addonItems = [
-    {
-      title: "Aam Panna",
-      description:
-        "A refreshing summer drink made from raw mangoes and spices to cool you down.",
-      imageUrl: "/plan-images/single/1.jpg",
-    },
-    {
-      title: "Masala Chaas",
-      description:
-        "Traditional buttermilk spiced with cumin, ginger, and coriander for digestion.",
-      imageUrl: "/plan-images/single/2.jpg",
-    },
-    {
-      title: "Thandai",
-      description:
-        "A festive North Indian drink made with milk, saffron, almonds, and spices.",
-      imageUrl: "/plan-images/single/3.jpg",
-    },
-    {
-      title: "Kesar Badam Milk",
-      description:
-        "Sweet, creamy milk infused with saffron and almonds, served warm or cold.",
-      imageUrl: "/plan-images/single/4.jpg",
-    },
-    {
-      title: "Aam Panna",
-      description:
-        "A refreshing summer drink made from raw mangoes and spices to cool you down.",
-      imageUrl: "/plan-images/single/5.jpg",
-    },
-    {
-      title: "Thandai",
-      description:
-      "A festive North Indian drink made with milk, saffron, almonds, and spices.",
-      imageUrl: "/plan-images/single/6.jpg",
-    },
-    {
-      title: "Aam Panna",
-      description:
-        "A refreshing summer drink made from raw mangoes and spices to cool you down.",
-      imageUrl: "/plan-images/single/7.jpg",
-    },
-  ];
-
   return (
     <div className="flex flex-col w-full h-full gap-6 bg-white">
       {/* how Fit Mafia works */}
@@ -128,7 +38,7 @@ const page = () => {
       </div>
 
       {/* Fit Mafia meals in 3 steps */}
-      <div className="flex flex-col min-h-[632px] h-auto items-center gap-7 xl:gap-10">
+      <div className="flex flex-col min-h-[632px] h-auto py-8 items-center gap-7 xl:gap-10">
         <h2 className="text-black font-Arial text-4xl font-bold text-center h-fit flex justify-center">
           Our Service in 3 Steps
         </h2>
@@ -139,17 +49,21 @@ const page = () => {
               alt="foodImage"
               width={342}
               height={342}
-              className="rounded-xl"
+              className="rounded-xl w-full h-auto"
             />
           </div>
           <div className="flex-[0.5] flex flex-col gap-3 px-6 md:px-12">
             {/* step 1 */}
             <div className="flex gap-4">
-              <img
+              <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 1: Choose Your Plan
@@ -164,11 +78,15 @@ const page = () => {
             </div>
             {/* step 2 */}
             <div className="flex gap-4">
-              <img
+            <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 2: Customize Your Box
@@ -183,11 +101,15 @@ const page = () => {
             </div>
             {/* step 3 */}
             <div className="flex gap-4">
-              <img
+            <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 3: Delivered Fresh to Your Door
@@ -202,11 +124,15 @@ const page = () => {
             </div>
             {/* step 4 */}
             <div className="flex gap-4">
-              <img
+            <div className="w-10 h-10 relative">
+              <Image
                 src="/icons/main/fa_plated_meal-318x.png"
                 alt="foodIcon"
-                className="w-10 h-10"
+                fill
+                sizes="40px"
+                className="object-contain"
               />
+              </div>
               <div className="flex flex-col gap-1">
                 <span className="font-bold text-black text-[20px] leading-[32px]">
                   Step 4: Heat, Eat & Thrive
@@ -223,7 +149,7 @@ const page = () => {
         </div>
       </div>
 
-      <MealsCardsSection/>
+      <MealsCardsSection />
 
       {/* check out our meals */}
       <div className="flex flex-col min-h-[520px] w-full h-auto gap-6 items-center px-6 md:px-12">
@@ -238,10 +164,10 @@ const page = () => {
             Each meal is crafted to bring the taste of home to your plate.
           </span>
         </div>
-        <Carousel items={mealsData} />
+        <Carousel items={howItWorksMealsData} />
       </div>
 
-      <OrderNow/>
+      <OrderNow />
       {/* add ones */}
       <div className="flex flex-col min-h-[580px] h-auto gap-6 items-center bg-[#f1f1ea] pt-6 pb-12 px-12">
         <div className="flex flex-col items-center w-full">
@@ -255,7 +181,7 @@ const page = () => {
             keep your meals balanced and fulfilling.
           </span>
         </div>
-        <Carousel items={addonItems} />
+        <Carousel items={howItWorksAddonItems} />
       </div>
 
       {/* learn more */}

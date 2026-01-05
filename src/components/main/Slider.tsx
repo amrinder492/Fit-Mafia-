@@ -20,6 +20,7 @@ const Slider = () => {
                                 alt='slider-img'
                                 fill
                                 style={{ objectFit: 'cover' }}
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             />
                         </div>
                         <div className="w-[90%] mx-auto flex flex-col gap-1 my-3 h-fit ">

@@ -41,13 +41,6 @@ input, textarea {
   outline: none
 }
 
-.bg-img-hero-section{
-  background-image: url('/icons/main/hero-section.png');
-  background-size: contain;
-  background-position: right top;
-  background-repeat: no-repeat;
-  background-size: 60% auto;
-}
 .scrollbar-hide{
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer and Edge */

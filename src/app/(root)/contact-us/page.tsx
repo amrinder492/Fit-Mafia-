@@ -1,6 +1,8 @@
 "use client"
 
+import ContactUsCard from "@/components/main/ContactUsCard";
 import ContactUsForm from "@/components/main/ContactUsForm";
+import Image from "next/image";
 import { useState } from "react";
 
 
@@ -39,7 +41,9 @@ const Page = () => {
             via chat or phone at +1 807 790 2770.
           </span>
           <div className="w-full p-4 min-h-[81px] bg-white flex items-center gap-3 shadow-md rounded-md">
-            <img src="/images/ask-q.png" alt="ask" className="h-6 w-6" />
+            <div className="h-6 w-6 relative">
+            <Image src="/images/ask-q.png" alt="ask" fill sizes="24px" className="object-contain" />
+            </div>
             <button onClick={()=> handleclick()} className="font-Helvetica font-bold text-[16px] leading-[24px] text-black">
               Ask any question
             </button>
@@ -47,33 +51,19 @@ const Page = () => {
             
             {showForm &&  <ContactUsForm fc={handleclick} /> }
         </div>
-        <div className="min-h-[314px] max-w-[471px] w-full h-full overflow-hidden">
-          <img
+        <div className="min-h-[314px] relative max-w-[471px] w-full h-full overflow-hidden">
+          <Image
             src="/temp/ca-contact-us-body-image.jpg"
-            alt=""
-            className="w-full h-full"
+            alt="contact-us"
+            fill
+            className="object-contain"
+            sizes="(max-width: 471px) 100vw, 471px"
           />
         </div>
       </div>
 
       {/* section 3 */}
-      <div className="w-full relative min-h-[600px] bg-[url('/images/food-main.avif')] bg-cover bg-center flex justify-center mt-40 ">
-        <div className="flex flex-col items-center mx-12 px-12 absolute top-[-80px] bg-white gap-6 py-10 border-gray-200 rounded-sm">
-          <h1 className="text-[#000] font-Arial Black text-4xl font-bold  text-center pt-8">
-            Get Up to 25% Off Our Ready-Made Meals
-          </h1>
-          <span className="text-[#4b4d4c] text-center">
-            Get fully-prepared, gourmet meals delivered to your doorstep. No
-            commitment necessary—skip or cancel at any time.
-          </span>
-          <button
-            // type="submit"
-            className="px-6 py-3 text-white border rounded-lg bg-fit-red"
-          >
-            Get Offer
-          </button>
-        </div>
-      </div>
+      <ContactUsCard title="Get Up to 25% Off Our Ready Made Meals" description=" Get fully prepared, gourmet meals delivered to your doorstep. No commitment necessary, skip or cancel at any time." buttonText="Get Offer" />
     </div>
   );
 };
